@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Travel Adventures</title>
+  <link rel="stylesheet" href="css/styles2.css">
+  <style>
+    .header {
+      position: relative;
+      overflow: hidden;
+      height: 300px;
+    }
+
+    .header img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .header-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 2.5em;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="assets/img/brazilbanner.jpeg" alt="Travel Adventures">
+    <div class="header-text">Lucas's Travels</div>
+    <p>My wife and I have traveled far and wide—here are the highlights of our journeys!</p>
+  </div>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo"><a href="index.html">Lucas Moraes</a></div>
+      <ul class="navbar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Resume.html">Resume</a></li>
+        <li><a href="Travels.html">Travels</a></li>
+        <li><a href="App.html">App</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main-content">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li>2023 Travels
+        <ul>
+          <li>Moab, UT</li>
+          <li>Ribeirao Preto, Brazil</li>
+          <li>Disneyland, California</li>
+          <li>Atlanta, GA</li>
+          <li>Denver, Colorado</li>
+          <li>New York, NY</li>
+          <li>Oahu, Hawaii</li>
+          <li>Kona, Hawaii</li>
+        </ul>
+      </li>
+      <li>2024 Travels
+        <ul>
+          <li>Arkansas, USA</li>
+          <li>Corona, CA</li>
+          <li>London, UK</li>
+          <li>Paris, France</li>
+          <li>Budapest, Hungary</li>
+          <li>Prague, Czech Republic</li>
+          <li>Ribeirao Preto, Brazil</li>
+          <li>Rio de Janeiro, Brazil</li>
+          <li>Amsterdam, Netherlands</li>
+          <li>Brussels, Belgium</li>
+          <li>Milan, Italy</li>
+          <li>Seoul, Korea</li>
+          <li>Tokyo, Japan</li>
+        </ul>
+      </li>
+      <li>2025 Travels
+        <ul>
+          <li>São Paulo, Brazil</li>
+          <li>St. George, UT</li>
+        </ul>
+      </li>
+      <li><a href="#gallery">Photo Gallery</a></li>
+      <li><a href="#visualizations">Travel Data Visualization</a></li>
+    </ol>
+
+    <h2>Destination Highlights</h2>
+
+    <h3>Budapest, Hungary</h3>
+    <p>I traveled there in August 2024.</p>
+    <img class="photo" src="assets/img/budapest2.jpg" alt="Budapest">
+    <p></p>
+    <strong>The Best Things We Did:</strong>
+    <ul>
+      <li>Visit Buda Castle & Fisherman’s Bastion</li>
+      <li>Take a Danube River Cruise at Sunset</li>
+      <li>Walk Across the Chain Bridge</li>
+      <li>Try Hungarian Goulash and Local Cuisine</li>
+    </ul>
+
+    <h3>Paris, France</h3>
+    <p>I traveled there in August 2024 during the Olympics.</p>
+    <img class="photo" src="assets/img/paris.jpg" alt="Paris">
+    <p></p>
+    <strong>The Best Things We Did:</strong>
+    <ul>
+      <li>Visit the Eiffel Tower & Trocadéro</li>
+      <li>Tour the Louvre Museum</li>
+      <li>Explore Montmartre and Sacré-Cœur</li>
+      <li>Walk along the Seine River</li>
+      <li>Enjoy Croissants & French Pastries</li>
+    </ul>
+
+    <h3>Tokyo, Japan</h3>
+    <p>I traveled there in December 2024.</p>
+    <img class="photo" src="assets/img/tokyo.jpeg" alt="Tokyo">
+    <p></p>
+    <strong>The Best Things We Did:</strong>
+    <ul>
+      <li>Explore Shibuya Crossing and Takeshita Street</li>
+      <li>Visit Meiji Shrine & Senso-ji Temple</li>
+      <li>Go to TeamLab Planets or Ghibli Museum</li>
+      <li>Take a Day Trip to Mt. Fuji (my wife's favorite)</li>
+      <li>Try Authentic Sushi and Ramen</li>
+    </ul>
+
+    <h2 id="gallery">Photo Gallery</h2>
+    <p>Some of our favorite travel moments captured in photos:</p>
+    <img class="photo" src="assets/img/amsterdam.jpeg" alt="Amsterdam" >
+    <img class="photo" src="assets/img/budapest3.jpg" alt="Budapest" >
+    <img class="photo" src="assets/img/city.jpg" alt="City" >
+    <img class="photo" src="assets/img/london.jpg" alt="London">
+    <img class="photo" src="assets/img/paris2.jpg" alt="Paris">
+    <img class="photo" src="assets/img/prague.jpg" alt="Prague" >
+    <img class="photo" src="assets/img/rio.jpg" alt="Rio" >
+    <img class="photo" src="assets/img/tokyo2.jpeg" alt="Tokyo" >
+    <img class="photo" src="assets/img/budapest4.jpg" alt="Budapest" >
+    <style>
+        .photo {
+          width: 300px;
+          height: 300px;
+          object-fit: cover; /* Ensures the image is cropped to fit the container without distortion */
+          border-radius: 8px; /* Adds rounded corners */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for a clean visual effect */
+        }
+      </style>
+
+    <h2>Favorite Travel Vlog</h2>
+    <p>One of the best travel vlogs that inspired us:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/EYE3F8oPn5w?si=RJ_Dh1zX6kJ7YA64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2 id="visualizations">Travel Data Visualization</h2>
+    <p>This Tableau visualization maps out our journey across the globe:</p>
+    <div class='tableauPlaceholder' id='viz1745372015880' style='position: relative'>
+        <noscript>
+            <a href='#'>
+                <img alt='Dashboard 1 ' src='https://public.tableau.com/static/images/Lu/LucassTravels/Dashboard1/1_rss.png' style='border: none' />
+            </a>
+        </noscript>
+        <object class='tableauViz'  style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+            <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+            <param name='name' value='LucassTravels/Dashboard1' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https://public.tableau.com/static/images/Lu/LucassTravels/Dashboard1/1.png' /> 
+            <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+            <param name='filter' value='publish=yes' />
+        </object>
+    </div>                
+    <script type='text/javascript'>                    
+    var divElement = document.getElementById('viz1745372015880');                    
+    var vizElement = divElement.getElementsByTagName('object')[0];                    
+    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
+    else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
+    else { vizElement.style.width='100%';vizElement.style.height='727px';}                     
+    var scriptElement = document.createElement('script');                    
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+    </script>
+  </div>
+
+  <div class="footer">
+    <p><a href="#top">Back to top</a> | <a href="index.html">Return to Professional Pages</a></p>
+  </div>
+</body>
+</html>

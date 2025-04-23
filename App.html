@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Travel-Themed Riddle Generator" />
+    <meta name="author" content="Lucas" />
+    <title>Travel-Themed Riddle Generator</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        .riddle-container {
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 500px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .riddle-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background-color: #357ab7;
+        }
+
+        .points {
+            font-weight: bold;
+            margin-top: 15px;
+            color: #333333;
+        }
+
+        .answer {
+            margin-top: 15px;
+            color: #4a4a4a;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="Resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="Travels.html">Travels</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="App.html">App</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="mb-4">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <h1>Travel-Themed Riddle Adventure</h1>
+                    <div class="riddle-container">
+                        <img id="riddle-image" class="riddle-image" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg" alt="Riddle Image">
+                        <p id="riddle">Click below to start your riddle adventure!</p>
+                        <button id="reveal-riddle-btn">Generate Riddle</button>
+                        <input type="text" id="guess" placeholder="Type your answer here" style="margin-top: 15px; padding: 10px; width: 80%;">
+                        <p class="answer" id="answer"></p>
+                        <button id="submit-btn" style="display: none;">Submit Answer</button>
+                        <p class="points">Points: <span id="points">0</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-top">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="small text-center text-muted fst-italic">Copyright &copy; Lucas Moraes 2025</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Riddle Generator Script -->
+    <script>
+        const riddles = [
+            { 
+                question: "I fly without wings. I cry without eyes. Wherever I go, darkness flies. What am I?",
+                answer: "A cloud",
+                image: src="assets/img/clouds.jpeg"
+            },
+            { 
+                question: "The more of me you take, the more you leave behind. What am I?", 
+                answer: "Footsteps",
+                image: src="assets/img/travel.jpeg"
+            },
+            { 
+                question: "What has cities, but no houses; forests, but no trees; and rivers, but no water?", 
+                answer: "A map",
+                image: src="assets/img/binoculars.jpeg"
+            }
+        ];
+
+        let currentRiddle = {};
+        let points = 0;
+
+        const riddleText = document.getElementById("riddle");
+        const riddleImage = document.getElementById("riddle-image");
+        const answerText = document.getElementById("answer");
+        const pointsText = document.getElementById("points");
+        const revealRiddleBtn = document.getElementById("reveal-riddle-btn");
+        const submitBtn = document.getElementById("submit-btn");
+        const guessInput = document.getElementById("guess");
+
+        // Generate a random riddle
+        revealRiddleBtn.addEventListener("click", () => {
+            const randomIndex = Math.floor(Math.random() * riddles.length);
+            currentRiddle = riddles[randomIndex];
+
+            riddleText.textContent = currentRiddle.question;
+            riddleImage.src = currentRiddle.image;
+            answerText.style.display = "none";
+            guessInput.value = "";
+            guessInput.style.display = "block";
+            submitBtn.style.display = "block";
+            revealRiddleBtn.textContent = "Next Riddle";
+        });
+
+        // Check the answer
+        submitBtn.addEventListener("click", () => {
+            const userGuess = guessInput.value.trim().toLowerCase();
+            if (userGuess === currentRiddle.answer.toLowerCase()) {
+                points++;
+                answerText.textContent = "Correct! 🎉 The answer is: " + currentRiddle.answer;
+            } else {
+                answerText.textContent = "Oops! The correct answer was: " + currentRiddle.answer;
+            }
+            answerText.style.display = "block"; // Make the answer visible
+            pointsText.textContent = points; // Update the points display
+        });
+    </script>
+
+    <!-- Bootstrap core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
